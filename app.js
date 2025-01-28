@@ -8,11 +8,18 @@ let amigo = document.getElementById('amigo');
 //agrego un amigo si el valor no es vacio
 
 function agregarAmigo() {
-  let nombre = amigo.value;
-  if(nombre != '') {
-    amigos.push(nombre);
+  
+  if(amigo.value != '') {
+    amigos.push(amigo.value);
+    
     console.log(amigos);
+    limpiarCaja();
   } else {
     alert('Por favor, inserte un nombre');
   }
+  
+}
+
+function limpiarCaja(){
+  amigo.value = '';
 }
