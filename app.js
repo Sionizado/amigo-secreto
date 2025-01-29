@@ -4,6 +4,7 @@
 let amigos = [];
 let amigo = document.getElementById('amigo');
 let lista = document.getElementById('listaAmigos');
+let ganador = document.getElementById('resultado');
 
 //agrego un amigo si el valor no es vacio
 
@@ -28,7 +29,8 @@ let sortearAmigo = () => {
     alert('No hay amigos para sortear');
   };
   let indiceSorteado = Math.floor(Math.random() * amigos.length);
-
+  let amigoSorteado = amigos[indiceSorteado];
+  ganador.innerHTML = amigoSorteado;
 }
 
 // limpia el input
