@@ -21,6 +21,16 @@ function agregarAmigo() {
   
 }
 
+//sortear un amigo
+
+let sortearAmigo = () => {
+  if(amigos.length == 0){
+    alert('No hay amigos para sortear');
+  };
+  let indiceSorteado = Math.floor(Math.random() * amigos.length);
+
+}
+
 // limpia el input
 function limpiarCaja(){
   amigo.value = '';
@@ -28,10 +38,10 @@ function limpiarCaja(){
 
 //agrega un nuevo amigo a la lista
 let agregarLista = () => {
-  lista.innerHTML = '';
+  lista.innerHTML = ''; 
   for (let i = 0; i < amigos.length; i++) {
     let nuevoAmigo = document.createElement('li');
     nuevoAmigo.textContent = amigos[i];
-    lista.appendChild(item);
+    lista.appendChild(nuevoAmigo);
   }
 }
